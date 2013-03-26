@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Fake
+Bundle-SymbolicName: org.equinoxosgi.toast.dev.airbag.fake
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.eclipse.equinox.common;bundle-version="3.6.0",
+ org.eclipse.core.jobs;bundle-version="3.5.1"
+Service-Component: OSGI-INF/component.xml
+Import-Package: org.equinoxosgi.toast.dev.airbag;version="[1.0.0,2.0.0)"

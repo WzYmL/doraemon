@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.pde.ui.EquinoxLauncher">
+<booleanAttribute key="append.args" value="true"/>
+<booleanAttribute key="automaticAdd" value="true"/>
+<booleanAttribute key="automaticValidate" value="false"/>
+<stringAttribute key="bootstrap" value=""/>
+<stringAttribute key="checked" value="[NONE]"/>
+<booleanAttribute key="clearConfig" value="true"/>
+<stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/Toast Client"/>
+<booleanAttribute key="default" value="true"/>
+<booleanAttribute key="default_auto_start" value="true"/>
+<intAttribute key="default_start_level" value="4"/>
+<stringAttribute key="deselected_workspace_plugins" value="org.eclipse.gef.examples.shapes,org.salever.rcp.spring.demo,org.salever.osgi.plugin.export,org.salever.rcp.tech.chapter19,biantai,org.salever.rcp.demo.welcome,org.salever.rcp.tech.chapter9,org.salever.rcp.tech.cnf.navigator,org.eclipse.jface.snippets,org.salever.rcp.tools.wordCounts,org.salever.rcp.tech.chapter8,org.salever.rcp.demo.earlystart,org.salever.rcp.demo.preference,org.salever.osgi.depends.clientbundle,org.salever.rcp.tech.chapter7,org.salever.osgi.filelocator,org.salever.rcp.tech.chapter6,org.salever.rcp.tech.chapter3.ex,org.salever.osgi.depends.sdk1,org.salever.rcp.tech.chapter15,org.salever.rcp.tech.chapter5,org.salever.rcp.tech.chapter18.decorator,org.equinoxosgi.toast.backend.emergency,testEdior,org.salever.rcp.tech.chapter4,org.salever.rcp.tech.chapter17,org.salever.rcp.tech.chapter3,net.test.rcp,net.fcp.abstable.descriptiontool,org.salever.rcp.demo.xmleditor,org.salever.rcp.tech.chapter18.marker,org.salever.osgi.depends.sdk-client,org.salever.osgi.depends.hostbundle,org.salever.rcp.examples.debug,org.salever.rcp.tools.springXMLgenerator,org.salever.rcp.singleton.demo,org.salever.rcp.tech.chapter11,org.salever.osgi.depends.sdk2,org.eclipse.mylyn.htmltext.example,org.salever.rcp.tech.helloworld,org.salever.rcp.demo.properties,org.eclipse.mylyn.htmltext,org.salever.rcp.tech.chapter12,org.salever.rcp.tech.chapter5.view,org.eclipse.swt.win32.win32.x86,com.tecbluecomet.jsim.ui.project,TutoGEF,org.salever.osgi.filelocator2,org.salever.rcp.tools.topology_viewer,org.salever.rcp.tech.chapter6.txtedit,com.tecbluecomet.jsim.core,org.salever.plugins.newwizard,org.salever.rcp.tech.chapter15.help,org.salever.draw2d.extension,org.salever.rcp.demo.wizard,org.salever.rcp.tech.chapter3.keybinding,org.salever.rcp.demo.action,com.ipacs.jet"/>
+<booleanAttribute key="includeOptional" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Xms128m -Xmx512m -Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dequinox.ds.print=true -Dtoast.core.util.logLevel=DEBUG -Dtoast.ID=ABC123 -Dtoast.backend.url=http://localhost:8080/toast"/>
+<stringAttribute key="pde.version" value="3.3"/>
+<booleanAttribute key="show_selected_only" value="false"/>
+<stringAttribute key="target_bundles" value="javax.servlet@default:default,org.eclipse.osgi,org.eclipse.equinox.ds@default:true,org.eclipse.equinox.preferences@default:default,org.eclipse.equinox.app@default:default,org.eclipse.equinox.common@default:default,org.eclipse.osgi.services@default:default,org.eclipse.core.jobs@default:default,org.eclipse.equinox.registry@default:default,org.eclipse.core.runtime@default:true,org.eclipse.core.contenttype@default:default,org.eclipse.equinox.util@default:default,org.eclipse.core.runtime.compatibility.auth@default:default,org.eclipse.core.runtime.compatibility.registry@default:false"/>
+<stringAttribute key="timestamp" value="1336037846009"/>
+<booleanAttribute key="tracing" value="false"/>
+<booleanAttribute key="useCustomFeatures" value="false"/>
+<booleanAttribute key="useDefaultConfigArea" value="true"/>
+<stringAttribute key="workspace_bundles" value="org.equinoxosgi.toast.core@default:default,org.equinoxosgi.toast.core.channel.sender*1.0.0.qualifier@default:default,org.equinoxosgi.toast.dev.gps@default:default,org.equinoxosgi.toast.dev.airbag@default:default,org.equinoxosgi.toast.core.emergency@default:default,org.equinoxosgi.toast.client.emergency@default:default"/>
+</launchConfiguration>

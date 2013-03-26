@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <!-- Phase 1 -->
+   <!-- Declare the view part to hold the default implementation --> 
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="org.salever.rcp.tech.cnf.navigator.category"
+            name="Common Navigator Examples"/>
+      <view
+            allowMultiple="false"
+            category="org.salever.rcp.tech.cnf.navigator.category"
+            class="org.eclipse.ui.navigator.CommonNavigator"
+            icon="icons/filenav_nav.gif"
+            id="org.salever.rcp.tech.cnf.navigator.view"
+            name="Example View"/>
+   </extension>
+   
+   <!-- Declare the viewer configuration, and the default content/action bindings -->
+   <extension
+         point="org.eclipse.ui.navigator.viewer">
+      <viewer viewerId="org.salever.rcp.tech.cnf.navigator.view.view"/>
+      <viewerContentBinding viewerId="org.salever.rcp.tech.cnf.navigator.view">
+         <includes>
+            <contentExtension pattern="org.eclipse.ui.navigator.resourceContent"/>
+            <contentExtension pattern="org.eclipse.ui.navigator.resources.filters.*"/> 
+            <contentExtension pattern="org.eclipse.ui.examples.navigator.filters.*"/>
+            <contentExtension
+                  pattern="org.salever.rcp.tech.cnf.navigator.propertiesContent">
+            </contentExtension> 
+         </includes>
+         <excludes></excludes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.salever.rcp.tech.cnf.navigator.view">
+         <includes>
+            <actionExtension pattern="org.eclipse.ui.navigator.resources.*"/>
+         </includes>
+         <excludes></excludes>
+      </viewerActionBinding>
+      <dragAssistant
+            class="org.salever.rcp.tech.cnf.CommonDragAdapterAssistant1"
+            viewerId="org.salever.rcp.tech.cnf.dragAssistant1">
+      </dragAssistant>
+   </extension>
+   
+   <!-- Declare a simple filter example that uses core expressions -->
+  
+  <!-- Phase 2 -->
+  <!-- Declare a content extension that renders the contents of a properties file -->
+  <extension
+         point="org.eclipse.ui.navigator.navigatorContent">
+         
+      
+      <commonFilter
+            id="org.eclipse.ui.examples.navigator.filters.hideNonJavaProjects"
+            name="Hide non-Java Projects">
+         <filterExpression>
+            <not>
+               <adapt
+                     type="org.eclipse.core.resources.IProject">
+                  <test
+                        property="org.eclipse.core.resources.projectNature"
+                        value="org.eclipse.jdt.core.javanature">
+                  </test>
+               </adapt>
+            </not>
+         </filterExpression>
+      </commonFilter>
+      <navigatorContent 
+            id="org.salever.rcp.tech.cnf.navigator.propertiesContent" 
+            name="Properties File Contents"
+            contentProvider="org.salever.rcp.tech.cnf.PropertiesContentProvider"
+            labelProvider="org.salever.rcp.tech.cnf.PropertiesLabelProvider" 
+            activeByDefault="true"
+            icon="icons/prop_ps.gif"
+            priority="normal" >
+         <triggerPoints>
+         	<or>
+	            <and>
+	               <instanceof value="org.eclipse.core.resources.IResource"/>
+	               <test
+	                     forcePluginActivation="true"
+	                     property="org.eclipse.core.resources.extension"
+	                     value="properties"/>
+	            </and>
+				<instanceof value="org.salever.rcp.tech.cnf.PropertiesTreeData"/>
+			</or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+               <instanceof value="org.salever.rcp.tech.cnf.PropertiesTreeData"/> 
+            </or>
+         </possibleChildren>
+      </navigatorContent>
+   </extension>
+  <extension
+        point="org.eclipse.ui.actionSets">
+     <actionSet
+           id="org.salever.rcp.tech.cnf.navigator.actionSet"
+           label="Sample Action Set"
+           visible="true">
+        <menu
+              id="sampleMenu"
+              label="Sample &amp;Menu">
+           <separator
+                 name="sampleGroup">
+           </separator>
+        </menu>
+        <action
+              class="org.salever.rcp.tech.cnf.navigator.actions.SampleAction"
+              icon="icons/sample.gif"
+              id="org.salever.rcp.tech.cnf.navigator.actions.SampleAction"
+              label="&amp;Sample Action"
+              menubarPath="sampleMenu/sampleGroup"
+              style="pulldown"
+              toolbarPath="sampleGroup"
+              tooltip="Hello, Eclipse world">
+           <selection
+                 class="org.eclipse.core.resources.IFile">
+           </selection>
+        </action>
+     </actionSet>
+  </extension>
+   <!-- Bind the Properties content extension to the viewer -->
+  
+</plugin>

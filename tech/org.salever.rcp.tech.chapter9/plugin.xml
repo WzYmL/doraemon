@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.salever.rcp.tech.chapter9.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="org.salever.rcp.tech.chapter9.Perspective"
+            id="org.salever.rcp.tech.chapter9.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="org.salever.rcp.tech.chapter9.actionSet"
+            label="Sample Action Set"
+            visible="true">
+         <menu
+               id="sampleMenu"
+               label="Sample &amp;Menu">
+            <separator
+                  name="sampleGroup">
+            </separator>
+         </menu>
+         <action
+               class="org.salever.rcp.tech.chapter9.actions.PreferenceAction"
+               icon="icons/sample.gif"
+               id="org.salever.rcp.tech.chapter9.actions.PreferenceAction"
+               label="&amp;PreferenceAction"
+               menubarPath="sampleMenu/sampleGroup"
+               toolbarPath="sampleGroup"
+               tooltip="Hello, Eclipse world">
+         </action>
+         <action
+               class="org.salever.rcp.tech.chapter9.actions.DeleteAction"
+               icon="icons/delete.gif"
+               id="org.salever.rcp.tech.chapter9.actions.DeleteAction"
+               label="&amp;DeleteAction"
+               menubarPath="sampleMenu/sampleGroup"
+               style="push"
+               toolbarPath="sampleGroup">
+         </action>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.salever.rcp.tech.chapter9.preferences.SamplePreferencePage"
+            id="org.salever.rcp.tech.chapter9.preferences.SamplePreferencePage"
+            name="Sample Preferences">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.salever.rcp.tech.chapter9.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+
+</plugin>

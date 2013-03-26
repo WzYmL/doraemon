@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="org.salever.android.step"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:label="@string/app_name" android:name="StepApplication" android:icon="@drawable/eclipse">
+        <activity android:label="@string/app_name" android:name="org.salever.android.step.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    <activity android:name="org.salever.android.step.textview.TextViewActivity"></activity>
+<activity android:name=".edittext.EditTextActivity"></activity>
+<activity android:name=".spinner.SpinnerActivity"></activity>
+<activity android:name=".aotucompletetextview.AutoCompleteTextViewActivity"></activity>
+<activity android:name=".datepicker.DatePickerActivity"></activity>
+<activity android:name=".scrollview.ScrollViewActivity"></activity>
+<activity android:name=".progressbar.ProgressBarActivity"></activity>
+<activity android:name=".ratingbar.RatingBarActivity"></activity>
+<activity android:name=".gallery.GalleryActivity"></activity>
+<activity android:name=".menu.MenuActivity"></activity>
+<activity android:name=".activity.OtherActivity"></activity>
+<activity android:name=".activity.AnotherActivity"></activity>
+<activity android:name=".activity.ActivityActivity"></activity>
+<activity android:name=".dialog.DialogActivity"></activity>
+<activity android:name=".notification.NotificationActivity"></activity>
+<activity android:name=".toast.ToastActivity"></activity>
+
+<activity android:name=".listview.ListViewActivity"></activity>
+</application>
+
+
+<uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+</manifest> 

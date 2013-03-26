@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.salever.rcp.demo.welcome.intro.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="org.salever.rcp.demo.welcome.intro.Perspective"
+            id="org.salever.rcp.demo.welcome.perspective">
+      </perspective>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.salever.rcp.demo.welcome.application"
+            name="RCP Product">
+         <property
+               name="windowImages"
+               value="icons/appli_16x16.gif,icons/appli_32x32.gif,icons/appli_48x48.gif">
+         </property>
+         <property
+               name="appName"
+               value="RCP Product">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro">
+      <intro
+            class="org.eclipse.ui.intro.config.CustomizableIntroPart"
+            id="org.salever.rcp.demo.welcome.intro">
+      </intro>
+      <introProductBinding
+            introId="org.salever.rcp.demo.welcome.intro"
+            productId="org.salever.rcp.demo.welcome.product">
+      </introProductBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.config">
+      <config
+            introId="org.salever.rcp.demo.welcome.intro"
+            content="introContent.xml"
+            id="org.salever.rcp.demo.welcome.configId">
+         <presentation
+               home-page-id="root">
+            <implementation
+                  kind="html"
+                  os="win32,linux,macosx">
+            </implementation>
+         </presentation>
+      </config>
+   </extension>
+
+</plugin>

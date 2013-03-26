@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Toast Simulated GPS
+Bundle-SymbolicName: org.equinoxosgi.toast.dev.gps.sim
+Bundle-Version: 1.0.0
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Export-Package: org.equinoxosgi.toast.dev.gps.sim;version="1.0.0",
+ org.equinoxosgi.toast.internal.dev.gps.sim;version="1.0.0";x-internal:=true
+Service-Component: OSGI-INF/component.xml
+Import-Package: org.equinoxosgi.toast.core;version="1.0.0",
+ org.equinoxosgi.toast.dev.gps;version="1.0.0",
+ org.equinoxosgi.toast.devsim;version="1.0.0",
+ org.equinoxosgi.toast.devsim.fw;version="1.0.0"

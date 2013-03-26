@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<mapping_file path=""/>
+	<subnets>
+		<subnet id="1" level="1" name="entire_network" type="subnet" >
+			<icon position_x="50" position_y="50"/>
+			<routers>
+				<router id="0" name="sydney-vpn1" type="router">
+					<icon position_x="50" position_y="0"/>
+					<config_file path="D:\Network Viewer\Samples of Configuration Files\10.100.112.18-VPN SYDNEY.log"/>
+					<routing_protocol exterior_gateway_protocol="bgp" interior_gateway_protocol="ospf"/>
+					
+					    <dns_server ip_address="169.254.68.254"/>
+					    <dns_server ip_address="203.8.183.1"/>				    
+					
+					    <interface ip_address="10.250.1.189" name="Loopback0" subnet_mask="255.255.255.255"/>
+					    <interface ip_address="10.100.253.234" name="Tunnel0" subnet_mask="255.255.255.252"/>
+					
+				</router>
+      </routers>
+      <subnetList>
+           <subnetRef id="2"/>
+      </subnetList>   </subnet>
+      <subnet id="2" level="1" name="entire_network" type="subnet" >
+			<icon position_x="50" position_y="50"/>
+			<routers>
+				<router id="0" name="sydney-vpn1" type="router">
+					<icon position_x="50" position_y="0"/>
+					<config_file path="D:\Network Viewer\Samples of Configuration Files\10.100.112.18-VPN SYDNEY.log"/>
+					<routing_protocol exterior_gateway_protocol="bgp" interior_gateway_protocol="ospf"/>
+					<dns_servers>
+					    <dns_server ip_address="169.254.68.254"/>
+					    <dns_server ip_address="203.8.183.1"/>				    
+					</dns_servers>
+					<interfaces>
+					    <interface ip_address="10.250.1.189" name="Loopback0" subnet_mask="255.255.255.255"/>
+					    <interface ip_address="10.100.253.234" name="Tunnel0" subnet_mask="255.255.255.252"/>
+					</interfaces>
+				</router>
+      </routers>
+      <subnetList>
+           <subnetRef id="2"/>
+      </subnetList>   </subnet>
+      <subnet id="3" level="1" name="entire_network" type="subnet" >
+			<icon position_x="50" position_y="50"/>
+			<routers>
+				<router id="0" name="sydney-vpn1" type="router">
+					<icon position_x="50" position_y="0"/>
+					<config_file path="D:\Network Viewer\Samples of Configuration Files\10.100.112.18-VPN SYDNEY.log"/>
+					<routing_protocol exterior_gateway_protocol="bgp" interior_gateway_protocol="ospf"/>
+					<dns_servers>
+					    <dns_server ip_address="169.254.68.254"/>
+					    <dns_server ip_address="203.8.183.1"/>				    
+					</dns_servers>
+					<interfaces>
+					    <interface ip_address="10.250.1.189" name="Loopback0" subnet_mask="255.255.255.255"/>
+					    <interface ip_address="10.100.253.234" name="Tunnel0" subnet_mask="255.255.255.252"/>
+					</interfaces>
+				</router>
+      </routers>
+      <subnetList>
+           <subnetRef id="2"/>
+      </subnetList>   </subnet>
+      <subnet id="4" level="1" name="entire_network" type="subnet" >
+			<icon position_x="50" position_y="50"/>
+			<routers>
+				<router id="0" name="sydney-vpn1" type="router">
+					<icon position_x="50" position_y="0"/>
+					<config_file path="D:\Network Viewer\Samples of Configuration Files\10.100.112.18-VPN SYDNEY.log"/>
+					<routing_protocol exterior_gateway_protocol="bgp" interior_gateway_protocol="ospf"/>
+					<dns_servers>
+					    <dns_server ip_address="169.254.68.254"/>
+					    <dns_server ip_address="203.8.183.1"/>				    
+					</dns_servers>
+					<interfaces>
+					    <interface ip_address="10.250.1.189" name="Loopback0" subnet_mask="255.255.255.255"/>
+					    <interface ip_address="10.100.253.234" name="Tunnel0" subnet_mask="255.255.255.252"/>
+					</interfaces>
+				</router>
+      </routers>
+      <subnetList>
+           <subnetRef id="2"/>
+      </subnetList>   </subnet>
+      <subnet id="5" level="1" name="entire_network" type="subnet" >
+			<icon position_x="50" position_y="50"/>
+			<routers>
+				<router id="0" name="sydney-vpn1" type="router">
+					<icon position_x="50" position_y="0"/>
+					<config_file path="D:\Network Viewer\Samples of Configuration Files\10.100.112.18-VPN SYDNEY.log"/>
+					<routing_protocol exterior_gateway_protocol="bgp" interior_gateway_protocol="ospf"/>
+					<dns_servers>
+					    <dns_server ip_address="169.254.68.254"/>
+					    <dns_server ip_address="203.8.183.1"/>				    
+					</dns_servers>
+					<interfaces>
+					    <interface ip_address="10.250.1.189" name="Loopback0" subnet_mask="255.255.255.255"/>
+					    <interface ip_address="10.100.253.234" name="Tunnel0" subnet_mask="255.255.255.252"/>
+					</interfaces>
+				</router>
+      </routers>
+      <subnetList>
+           <subnetRef id="2"/>
+      </subnetList>   </subnet>
+      <subnet id="6" level="1" name="entire_network" type="subnet" >
+			<icon position_x="50" position_y="50"/>
+			<routers>
+				<router id="0" name="sydney-vpn1" type="router">
+					<icon position_x="50" position_y="0"/>
+					<config_file path="D:\Network Viewer\Samples of Configuration Files\10.100.112.18-VPN SYDNEY.log"/>
+					<routing_protocol exterior_gateway_protocol="bgp" interior_gateway_protocol="ospf"/>
+					<dns_servers>
+					    <dns_server ip_address="169.254.68.254"/>
+					    <dns_server ip_address="203.8.183.1"/>				    
+					</dns_servers>
+					<interfaces>
+					    <interface ip_address="10.250.1.189" name="Loopback0" subnet_mask="255.255.255.255"/>
+					    <interface ip_address="10.100.253.234" name="Tunnel0" subnet_mask="255.255.255.252"/>
+					</interfaces>
+				</router>
+      </routers>
+      <subnetList>
+           <subnetRef id="2"/>
+      </subnetList>   </subnet>
+      <subnet id="7" level="1" name="entire_network" type="subnet" >
+			<icon position_x="50" position_y="50"/>
+			<routers>
+				<router id="0" name="sydney-vpn1" type="router">
+					<icon position_x="50" position_y="0"/>
+					<config_file path="D:\Network Viewer\Samples of Configuration Files\10.100.112.18-VPN SYDNEY.log"/>
+					<routing_protocol exterior_gateway_protocol="bgp" interior_gateway_protocol="ospf"/>
+					<dns_servers>
+					    <dns_server ip_address="169.254.68.254"/>
+					    <dns_server ip_address="203.8.183.1"/>				    
+					</dns_servers>
+					<interfaces>
+					    <interface ip_address="10.250.1.189" name="Loopback0" subnet_mask="255.255.255.255"/>
+					    <interface ip_address="10.100.253.234" name="Tunnel0" subnet_mask="255.255.255.252"/>
+					</interfaces>
+				</router>
+      </routers>
+      <subnetList>
+           <subnetRef id="2"/>
+      </subnetList>   </subnet>
+      <subnet id="8" level="1" name="entire_network" type="subnet" >
+			<icon position_x="50" position_y="50"/>
+			<routers>
+				<router id="0" name="sydney-vpn1" type="router">
+					<icon position_x="50" position_y="0"/>
+					<config_file path="D:\Network Viewer\Samples of Configuration Files\10.100.112.18-VPN SYDNEY.log"/>
+					<routing_protocol exterior_gateway_protocol="bgp" interior_gateway_protocol="ospf"/>
+					<dns_servers>
+					    <dns_server ip_address="169.254.68.254"/>
+					    <dns_server ip_address="203.8.183.1"/>				    
+					</dns_servers>
+					<interfaces>
+					    <interface ip_address="10.250.1.189" name="Loopback0" subnet_mask="255.255.255.255"/>
+					    <interface ip_address="10.100.253.234" name="Tunnel0" subnet_mask="255.255.255.252"/>
+					</interfaces>
+				</router>
+      </routers>
+      <subnetList>
+           <subnetRef id="2"/>
+      </subnetList>   </subnet>
+      <subnet id="9" level="1" name="entire_network" type="subnet" >
+			<icon position_x="50" position_y="50"/>
+			<routers>
+				<router id="0" name="sydney-vpn1" type="router">
+					<icon position_x="50" position_y="0"/>
+					<config_file path="D:\Network Viewer\Samples of Configuration Files\10.100.112.18-VPN SYDNEY.log"/>
+					<routing_protocol exterior_gateway_protocol="bgp" interior_gateway_protocol="ospf"/>
+					<dns_servers>
+					    <dns_server ip_address="169.254.68.254"/>
+					    <dns_server ip_address="203.8.183.1"/>				    
+					</dns_servers>
+					<interfaces>
+					    <interface ip_address="10.250.1.189" name="Loopback0" subnet_mask="255.255.255.255"/>
+					    <interface ip_address="10.100.253.234" name="Tunnel0" subnet_mask="255.255.255.252"/>
+					</interfaces>
+				</router>
+      </routers>
+      <subnetList>
+           <subnetRef id="2"/>
+      </subnetList>   </subnet>
+      <subnet id="10" level="1" name="entire_network" type="subnet" >
+			<icon position_x="50" position_y="50"/>
+			<routers>
+				<router id="0" name="sydney-vpn1" type="router">
+					<icon position_x="50" position_y="0"/>
+					<config_file path="D:\Network Viewer\Samples of Configuration Files\10.100.112.18-VPN SYDNEY.log"/>
+					<routing_protocol exterior_gateway_protocol="bgp" interior_gateway_protocol="ospf"/>
+					<dns_servers>
+					    <dns_server ip_address="169.254.68.254"/>
+					    <dns_server ip_address="203.8.183.1"/>				    
+					</dns_servers>
+					<interfaces>
+					    <interface ip_address="10.250.1.189" name="Loopback0" subnet_mask="255.255.255.255"/>
+					    <interface ip_address="10.100.253.234" name="Tunnel0" subnet_mask="255.255.255.252"/>
+					</interfaces>
+				</router>
+      </routers>
+      <subnetList>
+           <subnetRef id="2"/>
+      </subnetList>   </subnet>
+      <subnet id="11" level="1" name="entire_network" type="subnet" >
+			<icon position_x="50" position_y="50"/>
+			<routers>
+				<router id="0" name="sydney-vpn1" type="router">
+					<icon position_x="50" position_y="0"/>
+					<config_file path="D:\Network Viewer\Samples of Configuration Files\10.100.112.18-VPN SYDNEY.log"/>
+					<routing_protocol exterior_gateway_protocol="bgp" interior_gateway_protocol="ospf"/>
+					<dns_servers>
+					    <dns_server ip_address="169.254.68.254"/>
+					    <dns_server ip_address="203.8.183.1"/>				    
+					</dns_servers>
+					<interfaces>
+					    <interface ip_address="10.250.1.189" name="Loopback0" subnet_mask="255.255.255.255"/>
+					    <interface ip_address="10.100.253.234" name="Tunnel0" subnet_mask="255.255.255.252"/>
+					</interfaces>
+				</router>
+      </routers>
+      <subnetList>
+           <subnetRef id="2"/>
+      </subnetList>   </subnet>
+      <subnet id="12" level="1" name="entire_network" type="subnet" >
+			<icon position_x="50" position_y="50"/>
+			<routers>
+				<router id="0" name="sydney-vpn1" type="router">
+					<icon position_x="50" position_y="0"/>
+					<config_file path="D:\Network Viewer\Samples of Configuration Files\10.100.112.18-VPN SYDNEY.log"/>
+					<routing_protocol exterior_gateway_protocol="bgp" interior_gateway_protocol="ospf"/>
+					<dns_servers>
+					    <dns_server ip_address="169.254.68.254"/>
+					    <dns_server ip_address="203.8.183.1"/>				    
+					</dns_servers>
+					<interfaces>
+					    <interface ip_address="10.250.1.189" name="Loopback0" subnet_mask="255.255.255.255"/>
+					    <interface ip_address="10.100.253.234" name="Tunnel0" subnet_mask="255.255.255.252"/>
+					</interfaces>
+				</router>
+      </routers>
+      <subnetList>
+           <subnetRef id="2"/>
+      </subnetList>   </subnet>
+      <subnet id="13" level="1" name="entire_network" type="subnet" >
+			<icon position_x="50" position_y="50"/>
+			<routers>
+				<router id="0" name="sydney-vpn1" type="router">
+					<icon position_x="50" position_y="0"/>
+					<config_file path="D:\Network Viewer\Samples of Configuration Files\10.100.112.18-VPN SYDNEY.log"/>
+					<routing_protocol exterior_gateway_protocol="bgp" interior_gateway_protocol="ospf"/>
+					<dns_servers>
+					    <dns_server ip_address="169.254.68.254"/>
+					    <dns_server ip_address="203.8.183.1"/>				    
+					</dns_servers>
+					<interfaces>
+					    <interface ip_address="10.250.1.189" name="Loopback0" subnet_mask="255.255.255.255"/>
+					    <interface ip_address="10.100.253.234" name="Tunnel0" subnet_mask="255.255.255.252"/>
+					</interfaces>
+				</router>
+      </routers>
+      <subnetList>
+           <subnetRef id="2"/>
+      </subnetList>  </subnet> 
+      <subnet id="14" level="1" name="entire_network" type="subnet" >
+			<icon position_x="50" position_y="50"/>
+			<routers>
+				<router id="0" name="sydney-vpn1" type="router">
+					<icon position_x="50" position_y="0"/>
+					<config_file path="D:\Network Viewer\Samples of Configuration Files\10.100.112.18-VPN SYDNEY.log"/>
+					<routing_protocol exterior_gateway_protocol="bgp" interior_gateway_protocol="ospf"/>
+					<dns_servers>
+					    <dns_server ip_address="169.254.68.254"/>
+					    <dns_server ip_address="203.8.183.1"/>				    
+					</dns_servers>
+					<interfaces>
+					    <interface ip_address="10.250.1.189" name="Loopback0" subnet_mask="255.255.255.255"/>
+					    <interface ip_address="10.100.253.234" name="Tunnel0" subnet_mask="255.255.255.252"/>
+					</interfaces>
+				</router>
+      </routers>
+      <subnetList>
+           <subnetRef id="2"/>
+      </subnetList>  
+       </subnet>
+      <subnet id="15" level="1" name="entire_network" type="subnet" >
+			<icon position_x="50" position_y="50"/>
+			<routers>
+				<router id="0" name="sydney-vpn1" type="router">
+					<icon position_x="50" position_y="0"/>
+					<config_file path="D:\Network Viewer\Samples of Configuration Files\10.100.112.18-VPN SYDNEY.log"/>
+					<routing_protocol exterior_gateway_protocol="bgp" interior_gateway_protocol="ospf"/>
+					<dns_servers>
+					    <dns_server ip_address="169.254.68.254"/>
+					    <dns_server ip_address="203.8.183.1"/>				    
+					</dns_servers>
+					<interfaces>
+					    <interface ip_address="10.250.1.189" name="Loopback0" subnet_mask="255.255.255.255"/>
+					    <interface ip_address="10.100.253.234" name="Tunnel0" subnet_mask="255.255.255.252"/>
+					</interfaces>
+				</router>
+      </routers>
+      <subnetList>
+           <subnetRef id="2"/>
+      </subnetList>   
+		</subnet>
+		<subnet id="2" level="2" name="some_network" type="subnet">
+			<icon position_x="50" position_y="50"/>
+			<routers>
+				<router id="0" name="sydney-vpn1" type="router">
+					<icon position_x="50" position_y="0"/>
+					<config_file path="D:\Network Viewer\Samples of Configuration Files\10.100.112.18-VPN SYDNEY.log"/>
+					<routing_protocol exterior_gateway_protocol="bgp" interior_gateway_protocol="ospf"/>
+					<dns_servers>
+					    <dns_server ip_address="169.254.68.254"/>
+					    <dns_server ip_address="203.8.183.1"/>
+					    <dns_server ip_address="192.189.54.33"/>
+					    <dns_server ip_address="192.189.54.17"/>
+					    <dns_server ip_address="147.28.0.39"/>
+					</dns_servers>
+					<interfaces>
+					    <interface ip_address="10.250.1.189" name="Loopback0" subnet_mask="255.255.255.255"/>
+					    <interface ip_address="10.100.253.234" name="Tunnel0" subnet_mask="255.255.255.252"/>
+					    <interface ip_address="10.100.112.18" name="Tunnel1" subnet_mask="255.255.255.252"/>
+					    <interface ip_address="10.254.253.30" name="Tunnel2" subnet_mask="255.255.255.252"/>
+					    <interface ip_address="10.100.112.58" name="Tunnel3" subnet_mask="255.255.255.252"/>
+					    <interface ip_address="169.254.68.2" name="FastEthernet0/0" subnet_mask="255.255.255.0"/>
+					    <interface ip_address="203.63.252.233" name="FastEthernet0/1" subnet_mask="255.255.255.248"/>
+				  </interfaces>
+				</router>
+      </routers>
+      <subnetList>
+           <subnetRef id="2"/>
+      </subnetList>   
+		</subnet>
+	</subnets>
+	<routers>
+	  <router id="0" name="sydney-vpn1" type="router">
+	    <icon position_x="50" position_y="0"/>
+		  <config_file path="D:\Network Viewer\Samples of Configuration Files\10.100.112.18-VPN SYDNEY.log"/>
+		  <routing_protocol exterior_gateway_protocol="bgp" interior_gateway_protocol="ospf"/>
+			<dns_servers>
+			  	<dns_server ip_address="169.254.68.254"/>
+				  <dns_server ip_address="203.8.183.1"/>				
+			</dns_servers>
+			<interfaces>
+				  <interface ip_address="10.250.1.189" name="Loopback0" subnet_mask="255.255.255.255"/>					   
+			  	<interface ip_address="203.63.252.233" name="FastEthernet0/1" subnet_mask="255.255.255.248"/>
+			</interfaces>
+	  </router>
+	</routers>
+	<links>
+		<link local_router="0" remote_router="41"/>
+	</links>
+</config>

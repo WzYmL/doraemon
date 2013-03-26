@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component id="com.vire.tools.topology_viewer" version="2">
+    <resource path="src/com/vire/tools/topology_viewer/actions/OpenConfigureTargetAction.java" type="com.vire.tools.topology_viewer.actions.OpenConfigureTargetAction">
+        <filter id="571473929">
+            <message_arguments>
+                <message_argument value="LabelRetargetAction"/>
+                <message_argument value="OpenConfigureTargetAction"/>
+            </message_arguments>
+        </filter>
+    </resource>
+    <resource path="src/com/vire/tools/topology_viewer/descriptor/ReadOnlyTextPropertyDescriptor.java" type="com.vire.tools.topology_viewer.descriptor.ReadOnlyTextPropertyDescriptor">
+        <filter id="571473929">
+            <message_arguments>
+                <message_argument value="TextPropertyDescriptor"/>
+                <message_argument value="ReadOnlyTextPropertyDescriptor"/>
+            </message_arguments>
+        </filter>
+    </resource>
+</component>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="SpinnerData"><item>China</item>
+<item>Germany</item>
+<item>USA</item>
+<item>Russia</item>
+<item>UK</item>
+</string-array>
+</resources>

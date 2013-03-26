@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.salever.rcp.demo.action.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="org.salever.rcp.demo.action.Perspective"
+            id="org.salever.rcp.demo.action.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="org.salever.rcp.demo.action.editors.XMLEditor"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            extensions="xml"
+            icon="icons/sample.gif"
+            id="org.salever.rcp.demo.action.editors.XMLEditor"
+            name="Sample XML Editor">
+      </editor>
+   </extension>
+
+</plugin>

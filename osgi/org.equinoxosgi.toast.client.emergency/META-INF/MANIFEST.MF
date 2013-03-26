@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Toast Emergency
+Bundle-SymbolicName: org.equinoxosgi.toast.client.emergency
+Bundle-Version: 1.0.0.qualifier
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Service-Component: OSGI-INF/component.xml
+Import-Package: org.eclipse.core.runtime,
+ org.eclipse.core.runtime.jobs,
+ org.equinoxosgi.toast.core,
+ org.equinoxosgi.toast.core.channel.sender,
+ org.equinoxosgi.toast.core.emergency,
+ org.equinoxosgi.toast.internal.core.channel.sender;version="1.0.0"
+Require-Bundle: org.equinoxosgi.toast.dev.airbag;bundle-version="1.0.0",
+ org.equinoxosgi.toast.dev.gps;bundle-version="1.0.0"
+Export-Package: org.equinoxosgi.toast.client.emergency;version="1.0.0"

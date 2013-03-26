@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<ScrollView android:id="@+id/ScrollView01"
+		android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<LinearLayout android:id="@+id/LinearLayout01" android:orientation="vertical"
+			android:layout_width="fill_parent" android:layout_height="fill_parent">
+			<Button android:text="sun_1" android:id="@+id/sun_1"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+			<Button android:text="coludy_1" android:id="@+id/coludy_1"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+			<Button android:text="rain_1" android:id="@+id/rain_1"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+			<Button android:text="defaultSound" android:id="@+id/defaultSound"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+			<Button android:text="defaultVibrate" android:id="@+id/defaultVibrate"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+			<Button android:text="defaultAll" android:id="@+id/defaultAll"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+			<Button android:text="clear" android:id="@+id/clear"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+		</LinearLayout>
+
+	</ScrollView>
+
+</LinearLayout>

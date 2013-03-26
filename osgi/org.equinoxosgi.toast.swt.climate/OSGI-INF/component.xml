@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="org.equinoxosgi.toast.swt.climate" activate="startup" deactivate="shutdown">
+  <implementation class="org.equinoxosgi.toast.internal.swt.climate.ClimateControlScreen"/>
+  <reference bind="setClimate" interface="org.equinoxosgi.toast.dev.climate.IClimateControl" name="climate"/>
+  <reference bind="setShell" interface="org.equinoxosgi.toast.crust.shell.ICrustShell" name="shell"/>
+</scr:component>

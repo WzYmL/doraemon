@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.core.resources.IFile"
+            id="org.salever.rcp.tech.chapter18.marker.contribution1">
+         <menu
+               label="Test Marker Group"
+               path="additions"
+               id="org.salever.rcp.tech.chapter18.marker.menu1">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               label="Test Marker Action"
+               class="org.salever.rcp.tech.chapter18.marker.popup.actions.TestMarkerAction"
+               menubarPath="org.salever.rcp.tech.chapter18.marker.menu1/group1"
+               enablesFor="1"
+               id="org.salever.rcp.tech.chapter18.marker.testMarkerAction">
+         </action>
+      </objectContribution>
+   </extension>
+ <extension
+         id="org.salever.rcp.tech.chapter18.testMarker"
+         name="Test Folder Marker"
+         point="org.eclipse.core.resources.markers">
+      <persistent
+            value="true">
+      </persistent>
+      <super
+            type="org.eclipse.core.resources.bookmark">
+      </super>
+   </extension>
+
+</plugin>

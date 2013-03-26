@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.decorators">
+      <decorator
+            adaptable="true"
+            icon="icons/sample_decorator.gif"
+            id="org.salever.rcp.tech.chapter18.decorator.decorator"
+            label="Resource Decorator"
+            lightweight="true"
+            location="BOTTOM_RIGHT"
+            state="true">
+         <enablement>
+            <and>
+               <objectClass
+                     name="org.eclipse.core.resources.IResource">
+               </objectClass>
+               <or>
+                  <objectClass
+                        name="org.eclipse.core.resources.IProject">
+                  </objectClass>
+                  <objectClass
+                        name="org.eclipse.core.resources.IFile">
+                  </objectClass>
+               </or>
+            </and>
+         </enablement>
+      </decorator>
+   </extension>
+
+</plugin>

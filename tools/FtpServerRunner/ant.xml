@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project FtpServerRunner with libraries in sub-folder">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="E:/Dist/Jars/FTPServer/FTPServerTool.jar">
+            <manifest>
+                <attribute name="Main-Class" value="com.talend.router.ftp.runner.ui.ServerFrame"/>
+                <attribute name="Class-Path" value=". lib/forms-1.3.0.jar lib/ftpserver-core-1.0.0.jar lib/ftplet-api-1.0.0.jar lib/mina-core-2.0.0-M4.jar lib/slf4j-api-1.6.1.jar lib/slf4j-log4j12-1.6.1.jar lib/log4j-1.2.16.jar"/>
+            </manifest>
+            <fileset dir="E:/workspace/rcp_ws/FtpServerRunner/target/classes">
+            </fileset>
+        </jar>
+        <delete dir="E:/Dist/Jars/FTPServer/lib"/>
+        <mkdir dir="E:/Dist/Jars/FTPServer/lib"/>
+    	<copy file="E:/workspace/rcp_ws/FtpServerRunner/config/users.properties" todir="E:/Dist/Jars/FTPServer/config"/>
+    	<copy file="E:/workspace/rcp_ws/FtpServerRunner/README.txt" todir="E:/Dist/Jars/FTPServer"/>
+    	<copy file="E:/workspace/rcp_ws/FtpServerRunner/START.BAT" todir="E:/Dist/Jars/FTPServer"/>
+    	<copy file="E:/workspace/rcp_ws/FtpServerRunner/images/sample.gif" todir="E:/Dist/Jars/FTPServer/images"/>
+        <copy file="E:/workspace/rcp_ws/FtpServerRunner/forms-1.3.0.jar" todir="E:/Dist/Jars/FTPServer/lib"/>
+        <copy file="D:/mavenRepository/repository/org/apache/ftpserver/ftpserver-core/1.0.0/ftpserver-core-1.0.0.jar" todir="E:/Dist/Jars/FTPServer/lib"/>
+        <copy file="D:/mavenRepository/repository/org/apache/ftpserver/ftplet-api/1.0.0/ftplet-api-1.0.0.jar" todir="E:/Dist/Jars/FTPServer/lib"/>
+        <copy file="D:/mavenRepository/repository/org/apache/mina/mina-core/2.0.0-M4/mina-core-2.0.0-M4.jar" todir="E:/Dist/Jars/FTPServer/lib"/>
+        <copy file="D:/mavenRepository/repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar" todir="E:/Dist/Jars/FTPServer/lib"/>
+        <copy file="D:/mavenRepository/repository/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar" todir="E:/Dist/Jars/FTPServer/lib"/>
+        <copy file="D:/mavenRepository/repository/log4j/log4j/1.2.16/log4j-1.2.16.jar" todir="E:/Dist/Jars/FTPServer/lib"/>
+    </target>
+</project>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:jobs="http://org.talend/jobs" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ecore:nsPrefix="jobs" ecore:package="org.talend.jobs" targetNamespace="http://org.talend/jobs">
+  <xsd:import namespace="http://www.eclipse.org/emf/2002/Ecore" schemaLocation="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.xsd"/>
+  <xsd:element ecore:ignore="true" name="Component" type="jobs:Component"/>
+  <xsd:element ecore:ignore="true" name="Job" type="jobs:Job"/>
+  <xsd:complexType name="Component">
+    <xsd:attribute name="name" type="ecore:EString"/>
+  </xsd:complexType>
+  <xsd:complexType name="Job">
+    <xsd:annotation>
+      <xsd:appinfo ecore:key="operations" source="http://www.eclipse.org/emf/2002/Ecore">
+        <operation name="getNumber" type="ecore:EInt"/>
+      </xsd:appinfo>
+      <xsd:documentation>This class is for Jobs  <b>Bold</b>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:attribute name="name" type="ecore:EString">
+      <xsd:annotation>
+        <xsd:documentation>display name</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute ecore:reference="jobs:Component" name="components">
+      <xsd:simpleType>
+        <xsd:list itemType="xsd:anyURI"/>
+      </xsd:simpleType>
+    </xsd:attribute>
+  </xsd:complexType>
+</xsd:schema>

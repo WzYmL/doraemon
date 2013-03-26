@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Toast Core Emergency Support
+Bundle-SymbolicName: org.equinoxosgi.toast.core.emergency
+Bundle-Version: 1.0.0
+Export-Package: org.equinoxosgi.toast.core.emergency
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

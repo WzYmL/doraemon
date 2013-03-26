@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="org.equinoxosgi.toast.swt.audio" activate="startup" deactivate="shutdown">
+  <implementation class="org.equinoxosgi.toast.internal.swt.audio.AudioScreen"/>
+  <reference bind="setCd" interface="org.equinoxosgi.toast.dev.cdplayer.ICdPlayer" name="cd"/>
+  <reference bind="setAmp" interface="org.equinoxosgi.toast.dev.amplifier.IAmplifier" name="amp"/>
+  <reference bind="setRadio" interface="org.equinoxosgi.toast.dev.radio.IRadio" name="radio"/>
+  <reference bind="setShell" interface="org.equinoxosgi.toast.crust.shell.ICrustShell" name="shell"/>
+</scr:component>

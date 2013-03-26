@@ -1,0 +1,17 @@
+<html> 
+<body> 
+<table> 
+<tr>
+hello $name;
+##set($array = ["a", "b", "c"])
+#foreach($element in $array)
+<td>
+Age:
+$element.age
+Name:
+$element.name
+</tr>
+#end
+</td>
+</table> 
+</html>

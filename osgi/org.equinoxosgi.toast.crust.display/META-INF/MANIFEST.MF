@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Crust Display
+Bundle-SymbolicName: org.equinoxosgi.toast.crust.display;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: org.equinoxosgi.toast.crust.display;version="1.0.0",
+ org.equinoxosgi.toast.crust.internal.display;version="1.0.0";x-internal:=true
+Import-Package: org.eclipse.equinox.app;version="1.0.0",
+ org.eclipse.swt.widgets,
+ org.osgi.framework;version="[1.4.0,2.0.0)"
+Bundle-ActivationPolicy: lazy
+Bundle-Activator: org.equinoxosgi.toast.crust.internal.display.bundle.Activator

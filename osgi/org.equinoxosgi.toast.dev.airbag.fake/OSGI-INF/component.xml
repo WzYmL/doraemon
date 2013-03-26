@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="startup" deactivate="shutdown" name="org.equinoxogsi.toast.dev.airbag.fake">
+   <implementation class="org.equinoxosgi.toast.internal.dev.airbag.FakeAirbag"/>
+   <service>
+      <provide interface="org.equinoxosgi.toast.dev.airbag.IAirbag"/>
+   </service>
+</scr:component>

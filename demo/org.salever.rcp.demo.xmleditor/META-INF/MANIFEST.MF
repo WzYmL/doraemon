@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Xmleditor
+Bundle-SymbolicName: org.salever.rcp.demo.xmleditor; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.salever.rcp.demo.xmleditor.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.intro,
+ org.eclipse.jface.text,
+ org.eclipse.ui.editors,
+ org.eclipse.ui.ide
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

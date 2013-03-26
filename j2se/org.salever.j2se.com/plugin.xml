@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.salever.j2se.com.preferences.CategoryCOMPreferencePage"
+            class="org.salever.j2se.com.preferences.COMPreferencePage"
+            id="org.salever.j2se.com.preferences.COMPreferencePage"
+            name="串口配置">
+      </page>
+      <page
+            class="org.salever.j2se.com.preferences.COMCategoryPreferencePage"
+            id="org.salever.j2se.com.preferences.CategoryCOMPreferencePage"
+            name="串口">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.salever.j2se.com.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+
+</plugin>

@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Toast Airbag
+Bundle-SymbolicName: org.equinoxosgi.toast.dev.airbag
+Bundle-Version: 1.0.0.qualifier
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: org.equinoxosgi.toast.dev.airbag;version="1.0.0"

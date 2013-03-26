@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.salever.rcp.tech.chapter5.view.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="org.salever.rcp.tech.chapter5.view.Perspective"
+            id="org.salever.rcp.tech.chapter5.view.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="org.salever.rcp.tech.chapter5.view.SampleViewPart"
+            icon="icons/alt_window_16.gif"
+            id="org.salever.rcp.tech.chapter5.view.view1"
+            name="Sample View"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.viewActions">
+      <viewContribution
+            id="org.salever.rcp.tech.chapter5.view.viewContribution2"
+            targetID="org.salever.rcp.tech.chapter5.view.view1">
+         <action
+               class="org.salever.rcp.tech.chapter5.view.SampleAction"
+               icon="icons/alt_window_16.gif"
+               id="org.salever.rcp.tech.chapter5.view.action1"
+               label="Fisrt View Action"
+               menubarPath="addtional"
+               style="push"
+               toolbarPath="addtional">
+         </action>
+      </viewContribution>
+   </extension>
+
+</plugin>

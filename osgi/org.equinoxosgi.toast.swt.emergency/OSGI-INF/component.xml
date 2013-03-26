@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="org.equinoxosgi.toast.swt.emergency" activate="startup" deactivate="shutdown">
+  <implementation class="org.equinoxosgi.toast.internal.swt.emergency.EmergencyScreen"/>
+  <reference bind="setEmergency" cardinality="1..1" interface="org.equinoxosgi.toast.client.emergency.IEmergencyMonitor" name="monitor" policy="static"/>
+  <reference bind="setShell" cardinality="1..1" interface="org.equinoxosgi.toast.crust.shell.ICrustShell" name="crustShell" policy="static"/>
+</scr:component>

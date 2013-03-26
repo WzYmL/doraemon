@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+	<book>
+		<title lang="eng">Harry Potter</title>
+		<price>29.99</price>
+	</book>
+	<book>
+		<title lang="zh">Learning XML</title>
+		<price>39.95</price>
+	</book>
+	<book>
+		<title>Learning XPath</title>
+		<price>22239.95</price>
+	</book>
+</bookstore>
+

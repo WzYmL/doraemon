@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.salever.rcp.tech.chapter12.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="org.salever.rcp.tech.chapter12.Perspective"
+            id="org.salever.rcp.tech.chapter12.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="org.salever.rcp.tech.chapter12.actionSet"
+            label="Sample Action Set"
+            visible="true">
+         <menu
+               id="sampleMenu"
+               label="Sample &amp;Menu">
+            <separator
+                  name="sampleGroup">
+            </separator>
+         </menu>
+         <action
+               class="org.salever.rcp.tech.chapter12.actions.ProgressDialogAction "
+               icon="icons/sample.gif"
+               id="org.salever.rcp.tech.chapter12.actions.ProgressDialogAction "
+               label="&amp;ProgressDialogAction "
+               menubarPath="sampleMenu/sampleGroup"
+               toolbarPath="sampleGroup"
+               tooltip="ProgressDialogAction ">
+         </action>
+         <action
+               class="org.salever.rcp.tech.chapter12.actions.JobAction"
+               icon="icons/job.gif"
+               id="org.salever.rcp.tech.chapter12.actions.jobaction"
+               label="Job Action"
+               menubarPath="sampleMenu/sampleGroup"
+               style="push"
+               toolbarPath="sampleGroup"
+               tooltip="Job Action">
+         </action>
+      </actionSet>
+   </extension>
+
+</plugin>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component immediate="true" name="org.equinoxosgi.toast.backend.portal" xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+  <implementation class="org.equinoxosgi.toast.internal.backend.portal.bundle.Portal"/>
+  <reference bind="setHttp" interface="org.osgi.service.http.HttpService" name="http"/>
+  <reference bind="setControlCenter" interface="org.equinoxosgi.toast.backend.controlcenter.IControlCenter" name="controlCenter"/>
+  <reference
+    name="action"
+    interface="org.equinoxosgi.toast.backend.portal.spi.IPortalAction"
+    cardinality="0..n"
+    policy="dynamic"
+    bind="addAction"
+    unbind="removeAction"/>
+  <service>
+     <provide interface="org.equinoxosgi.toast.backend.portal.spi.IActionLookup"/>
+  </service>
+</scr:component>

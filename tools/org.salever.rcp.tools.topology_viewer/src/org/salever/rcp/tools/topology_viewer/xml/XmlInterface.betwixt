@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info primitiveTypes="attribute">
+	<element name="interface">
+		<attribute name="ip_address" property="ipAddress"/>
+		<attribute name="name" property="name"/>
+		<attribute name="subnet_mask" property="subnetMask"/>
+		<addDefaults/>
+	</element>
+</info>

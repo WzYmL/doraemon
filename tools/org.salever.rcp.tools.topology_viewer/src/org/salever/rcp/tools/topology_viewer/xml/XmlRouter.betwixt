@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info primitiveTypes="attribute">
+	<element name="subnet">
+	   
+	    <attribute name="name" property="name"/>
+	    <attribute name="type" property="type"/>
+	    
+	    <element name="icon" property="icon"/>
+	    <element name="config_file" property="configFile"/>
+	    <element name="routing_protocol" property="routingProtocol"/>
+	     
+	    <element name = "dns_servers">   
+	       <element name="dns_server" property="dnsServers"/>
+	    </element>
+	    
+	    <element name="interfaces">
+		   <element name="interface" property="netInterfaces"/>
+	    </element>
+	
+		<addDefaults/>
+	</element>
+</info>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product uid="org.salever.osgi.http.securoty" application="org.eclipse.ui.ide.workbench" version="1.0.0" useFeatures="false" includeLaunchers="true">
+
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <programArgs>-consoleLog -console</programArgs>
+      <vmArgs>-Xms128m -Xmx512m -Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dequinox.ds.print=true -Dtoast.core.util.logLevel=DEBUG -Dtoast.ID=ABC123 -Dtoast.backend.url=http://localhost:8080/toast</vmArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+   </launcherArgs>
+
+   <windowImages/>
+
+
+   <launcher>
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+
+   <vm>
+   </vm>
+
+
+   <plugins>
+      <plugin id="javax.servlet"/>
+      <plugin id="org.eclipse.equinox.cm"/>
+      <plugin id="org.eclipse.equinox.ds"/>
+      <plugin id="org.eclipse.equinox.http"/>
+      <plugin id="org.eclipse.equinox.http.jetty"/>
+      <plugin id="org.eclipse.equinox.http.servlet"/>
+      <plugin id="org.eclipse.equinox.log"/>
+      <plugin id="org.eclipse.equinox.servletbridge.extensionbundle" fragment="true"/>
+      <plugin id="org.eclipse.equinox.transforms.hook" fragment="true"/>
+      <plugin id="org.eclipse.equinox.util"/>
+      <plugin id="org.eclipse.equinox.weaving.hook" fragment="true"/>
+      <plugin id="org.eclipse.osgi"/>
+      <plugin id="org.eclipse.osgi.services"/>
+      <plugin id="org.mortbay.jetty.server"/>
+      <plugin id="org.mortbay.jetty.util"/>
+      <plugin id="org.salever.osgi.http.security"/>
+   </plugins>
+
+   <configurations>
+      <plugin id="org.salever.osgi.http.security" autoStart="true" startLevel="0" />
+   </configurations>
+
+</product>

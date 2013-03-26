@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+<mapping_file path="C:\topo\mapping_file.cfg"/>
+<routers>
+	<router id="1" name="R1" type="A">
+		<icon position_x="10" position_y="10"/>
+		<config_file path="C:\topo\R1.cfg"/>
+	</router> 
+	<router id="2" name="R2" type="A">
+		<icon position_x="10" position_y="200"/>
+		<config_file path="C:\topo\R2.cfg"/>
+	</router> 
+	<router id="3" name="R3" type="A">
+		<icon position_x="200" position_y="200"/>
+		<config_file path="C:\topo\R3.cfg"/>
+	</router> 
+	<router id="4" name="R4" type="A">
+		<icon position_x="200" position_y="10"/>
+		<config_file path="C:\topo\R4.cfg"/>
+	</router>
+</routers>
+<links>
+	<link local_router="1" remote_router="2"/>
+	<link local_router="2" remote_router="3"/>
+	<link local_router="3" remote_router="4"/>
+	<link local_router="4" remote_router="1"/>
+	<link local_router="1" remote_router="3"/>
+	<link local_router="2" remote_router="4"/>
+</links>
+</config>

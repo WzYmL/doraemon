@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="startup" deactivate="shutdown" name="org.equinoxosgi.toast.client.emergency">
+   <implementation class="org.equinoxosgi.toast.internal.client.emergency.EmergencyMonitor"/>
+   <reference bind="setAirbag" cardinality="1..1" interface="org.equinoxosgi.toast.dev.airbag.IAirbag" name="airbag" policy="static"/>
+   <reference bind="setGps" cardinality="1..1" interface="org.equinoxosgi.toast.dev.gps.IGps" name="gps" policy="static"/>
+   <service>
+      <provide interface="org.equinoxosgi.toast.client.emergency.IEmergencyMonitor"/>
+   </service>stati/service>
+</scr:component>

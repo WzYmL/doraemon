@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+     <extension point="org.eclipse.ui.editors">
+      <editor name="GEF Shapes Example"
+              extensions="shape"
+              icon="alt_window_16.gif"
+              default="true"
+              class="org.salever.gef.examples.layersupport.shapes.editors.ShapesEditor"
+              contributorClass="org.salever.gef.examples.layersupport.shapes.editors.ShapesEditorActionBarContributor"
+              id="GEF Shapes Editor">
+      </editor>
+   </extension>
+   <extension point="org.eclipse.ui.newWizards">
+      <category name="Examples"
+                parentCategory="org.eclipse.ui.Examples"
+                id="org.salever.gef.examples"/>
+      <wizard name="Shapes Diagram"
+              icon="alt_window_16.gif"
+              category="org.eclipse.ui.Examples/org.salever.gef.examples"
+              class="org.salever.gef.examples.layersupport.shapes.ShapesCreationWizard"
+              id="org.salever.gef.examples.shapes.ShapesCreationWizard">
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="org.salever.gef.examples.layersupport.shapes.Perspective"
+            icon="shapes.gif"
+            id="org.salever.gef.examples.shapes.perspective"
+            name="ShapeEdit">
+      </perspective>
+   </extension>
+   <extension
+         id="id1"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="org.salever.gef.examples.layersupport.shapes.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.salever.gef.examples.shapes.perspective">
+         <newWizardShortcut
+               id="org.salever.gef.examples.shapes.ShapesCreationWizard">
+         </newWizardShortcut>
+         <view
+               id="org.eclipse.ui.views.ContentOutline"
+               minimized="false"
+               ratio="0.3f"
+               relationship="right">
+         </view>
+         <view
+               id="org.eclipse.ui.navigator.ProjectExplorer"
+               minimized="false"
+               ratio="0.3f"
+               relationship="left"
+               relative="org.eclipse.ui.editorss">
+         </view>
+         <view
+               id="org.eclipse.ui.views.PropertySheet"
+               minimized="false"
+               ratio="0.3f"
+               relationship="bottom"
+               showTitle="true">
+         </view>
+         <viewShortcut
+               id="org.eclipse.ui.navigator.ProjectExplorer">
+         </viewShortcut>
+      </perspectiveExtension>
+   </extension>
+</plugin>

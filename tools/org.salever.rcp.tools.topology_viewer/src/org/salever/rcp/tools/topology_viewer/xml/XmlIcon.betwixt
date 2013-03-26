@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info primitiveTypes="attribute">
+	<element name="icon">
+		<attribute name="position_x" property="positionX"/>
+		<attribute name="position_y" property="positionY"/>
+		<addDefaults/>
+	</element>
+</info>

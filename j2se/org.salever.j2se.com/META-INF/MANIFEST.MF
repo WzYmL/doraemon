@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Com
+Bundle-SymbolicName: org.salever.j2se.com;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.salever.j2se.com.ClientComPlugin
+Bundle-Vendor: READIDTECH
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: lib/comm.jar,
+ .
+Export-Package: org.salever.j2se.com,
+ org.salever.j2se.com.connection,
+ org.salever.j2se.com.model,
+ org.salever.j2se.com.preferences

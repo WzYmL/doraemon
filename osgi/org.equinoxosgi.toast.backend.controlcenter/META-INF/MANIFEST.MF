@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Toast Back End Control Center
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Bundle-SymbolicName: org.equinoxosgi.toast.backend.controlcenter
+Bundle-Version: 1.0.0
+Export-Package: org.equinoxosgi.toast.backend.controlcenter;version="1.0.0",
+ org.equinoxosgi.toast.backend.provisioning;version="1.0.0"
+Service-Component: OSGI-INF/component.xml
+Import-Package: org.eclipse.core.runtime;common=split;version="3.4.0",
+ org.equinoxosgi.toast.backend.data,
+ org.equinoxosgi.toast.backend.data.internal,
+ org.equinoxosgi.toast.core;version="1.0.0",
+ org.equinoxosgi.toast.core.discovery,
+ org.equinoxosgi.toast.backend.provisioning

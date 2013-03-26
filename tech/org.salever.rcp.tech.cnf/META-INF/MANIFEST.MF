@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Navigator_Examples
+Bundle-SymbolicName: org.salever.rcp.tech.cnf.navigator;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.resources,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.navigator,
+ org.eclipse.ui.views,
+ org.eclipse.ui,
+ org.eclipse.ui.ide,
+ org.eclipse.ui.workbench,
+ org.eclipse.jdt;bundle-version="3.5.0",
+ org.eclipse.jdt.ui;bundle-version="3.5.0"
+Bundle-Activator: org.salever.rcp.tech.cnf.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="startup" deactivate="shutdown" immediate="true" name="org.equinoxosgi.toast.backend.controlcenter">
+  <implementation class="org.equinoxosgi.toast.internal.backend.controlcenter.ControlCenter"/>
+  <service>
+    <provide interface="org.equinoxosgi.toast.backend.controlcenter.IControlCenter"/>
+  </service> 
+  <reference bind="setProvisioner" interface="org.equinoxosgi.toast.backend.provisioning.IProvisioner" name="provisioner"/>
+  <reference bind="setDiscovery" interface="org.equinoxosgi.toast.core.discovery.IDiscovery" name="discovery"/>
+  <reference bind="setData" cardinality="1..1" interface="org.equinoxosgi.toast.backend.controlcenter.IData" name="data" policy="static"/>
+ </scr:component>

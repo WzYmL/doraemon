@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.salever.rcp.tech.chapter11.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Perspective"
+            class="org.salever.rcp.tech.chapter11.Perspective"
+            id="org.salever.rcp.tech.chapter11.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="View"
+            class="org.salever.rcp.tech.chapter11.View"
+            id="org.salever.rcp.tech.chapter11.view">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="*">
+         <view
+               standalone="true"
+               minimized="false"
+               relative="org.eclipse.ui.editorss"
+               relationship="left"
+               id="org.salever.rcp.tech.chapter11.view">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="org.salever.rcp.tech.chapter11.perspective.TestPerspectiveFactory"
+            icon="icons/default_persp.gif"
+            id="org.salever.rcp.tech.chapter11.testperspective"
+            name="Test Perspective">
+      </perspective>
+   </extension>
+
+</plugin>

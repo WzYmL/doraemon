@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:orientation="vertical">
+	<Button android:text="插入一条记录" android:id="@+id/SQLiteButtonInsertRecord"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"></Button>
+	<Button android:text="删除数据记录" android:id="@+id/SQLiteButtonDeleteRecord"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"></Button>
+	<Button android:text="查找数据记录" android:id="@+id/SQLiteButtonSearchRecord"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"></Button>
+	<Button android:text="删除表" android:id="@+id/SQLiteButtonDeleteTable"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"></Button>
+	<Button android:text="创建表" android:id="@+id/SQLiteButtonCreateTable"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"></Button>
+</LinearLayout>

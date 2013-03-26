@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info primitiveTypes="attribute">
+	<element name="subnet">
+	
+	    <attribute name="id" property="id"/>
+	    <attribute name="level" property="level"/>
+	    <attribute name="name" property="name"/>
+	    <attribute name="type" property="type"/>
+	    
+	    <element name="icon" property="icon"/>
+	    	  
+		<element name="routers">
+		    <element name="router" property="routers"/>
+		</element>
+		
+		<addDefaults/>
+	</element>
+</info>

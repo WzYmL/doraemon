@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, DiaryActivity!</string>
+    <string name="app_name">日记本</string>
+<string name="edit_title">标题</string>
+<string name="edit_body">内容</string>
+</resources>

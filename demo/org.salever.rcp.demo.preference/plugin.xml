@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.salever.rcp.demo.preference.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="org.salever.rcp.demo.preference.Perspective"
+            id="org.salever.rcp.demo.preference.perspective">
+      </perspective>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.salever.rcp.demo.preference.application"
+            name="Hello RCP">
+         <property
+               name="windowImages"
+               value="icons/alt_window_16.gif,icons/alt_window_32.gif">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="org.salever.rcp.demo.preference.contribution1"
+            objectClass="org.eclipse.core.resources.IFile">
+         <menu
+               id="org.salever.rcp.demo.preference.menu1"
+               label="New Submenu"
+               path="additions">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               class="org.salever.rcp.demo.preference.popup.actions.NewAction"
+               enablesFor="1"
+               id="org.salever.rcp.demo.preference.newAction"
+               label="New Action"
+               menubarPath="org.salever.rcp.demo.preference.menu1/group1">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.salever.rcp.demo.preference.preferences.SamplePreferencePage"
+            id="org.salever.rcp.demo.preference.preferences.SamplePreferencePage"
+            name="Sample Preferences">
+      </page>
+      <page
+            class="org.salever.rcp.demo.preference.preferences.WorkbenchPreferencePage1"
+            id="org.salever.rcp.demo.preference.page1"
+            name="Another Page">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.salever.rcp.demo.preference.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.activities">
+          <activity
+            id="org.salever.rcp.demo.preference.activity"
+            name="prefFilter">
+      </activity>
+      <activityPatternBinding
+            activityId="org.salever.rcp.demo.preference.activity"
+            isEqualityPattern="false"
+            pattern=".*org\.eclipse\.ui\.preferencePages.*">
+      </activityPatternBinding>
+   </extension>
+
+</plugin>

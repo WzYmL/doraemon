@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.salever.rcp.tools.wordcounts.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Perspective"
+            class="org.salever.rcp.tools.wordcounts.Perspective"
+            id="org.salever.rcp.tools.wordCounts.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="*">
+      </perspectiveExtension>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.salever.rcp.tools.wordCounts.application"
+            name="RCP Application">
+         <property
+               name="windowImages"
+               value="icons/alt_window_16.gif,icons/alt_window_32.gif">
+         </property>
+         <property
+               name="appName"
+               value="RCP Application">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="org.salever.rcp.tools.wordcounts.editors.SampleTextEditor"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            icon="icons/sample.gif"
+            id="org.salever.rcp.tools.wordcounts.editors.SampleTextEditor"
+            name="Sample XML Editor">
+      </editor>
+      <editor
+            default="false"
+            id="org.salever.rcp.tools.wordCounts.editor1"
+            name="name">
+      </editor>
+      <editor
+            class="org.salever.rcp.tools.wordcounts.editors.WordCountEditor"
+            icon="icons/sample.gif"
+            id="org.salever.rcp.tools.wordcounts.editors.WordCountEditor"
+            name="New EditorPart">
+      </editor>
+   </extension>
+
+</plugin>

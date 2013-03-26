@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Crust Shell
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-SymbolicName: org.equinoxosgi.toast.crust.shell
+Bundle-Version: 1.0.0
+Export-Package: org.equinoxosgi.toast.crust.internal.shell;version="1.0.0";x-internal:=true,
+ org.equinoxosgi.toast.crust.shell;version="1.0.0"
+Import-Package: org.equinoxosgi.toast.core;version="1.0.0",
+ org.equinoxosgi.toast.crust.display;version="[1.0.0,2.0.0)",
+ org.equinoxosgi.toast.crust.widgets;version="1.0.0",
+ org.eclipse.swt,
+ org.eclipse.swt.events,
+ org.eclipse.swt.graphics,
+ org.eclipse.swt.widgets
+Service-Component: OSGI-INF/component.xml

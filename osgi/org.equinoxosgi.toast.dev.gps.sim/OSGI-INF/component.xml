@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="startup" deactivate="shutdown" name="org.equinoxosgi.toast.dev.gps.sim">
+  <implementation class="org.equinoxosgi.toast.internal.dev.gps.sim.GpsSimulator"/>
+  <service>
+    <provide interface="org.equinoxosgi.toast.dev.gps.IGps"/>
+    <provide interface="org.equinoxosgi.toast.dev.gps.sim.IGpsSimulator"/>
+  </service>
+  <reference bind="setDevSim" interface="org.equinoxosgi.toast.devsim.IDeviceSimulator" name="devSim"/>
+</scr:component>

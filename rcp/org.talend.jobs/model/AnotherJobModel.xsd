@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/AnotherJobModel" xmlns:tns="http://www.example.org/AnotherJobModel" elementFormDefault="qualified">
+
+    <element name="Job" type="tns:Job"></element>
+    <element name="component" type="tns:Component"></element>
+
+    <complexType name="Component">
+    	<attribute name="name" type="string"></attribute>
+    </complexType>
+
+
+    <complexType name="Job">
+    	<sequence minOccurs="0" maxOccurs="unbounded">
+	    	<element ref="tns:component"></element>
+    	</sequence>
+    	<attribute name="name" type="string"></attribute>
+    </complexType>
+    
+
+</schema>

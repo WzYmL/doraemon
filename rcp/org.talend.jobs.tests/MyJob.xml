@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<jobs:Job xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:jobs="http://org.talend/jobs" name="Job Number one">
+  <components href="MyComponent.xml#/"/>
+</jobs:Job>

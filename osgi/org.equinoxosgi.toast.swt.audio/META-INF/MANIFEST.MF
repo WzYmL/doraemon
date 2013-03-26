@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Toast Client Audio UI
+Bundle-SymbolicName: org.equinoxosgi.toast.swt.audio
+Bundle-Version: 1.0.0
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: org.equinoxosgi.toast.internal.swt.audio;version="1.0.0";x-internal:=true
+Service-Component: OSGI-INF/component.xml
+Import-Package: org.equinoxosgi.toast.core;version="[1.0.0,2.0.0)",
+ org.equinoxosgi.toast.crust.shell;version="[1.0.0,2.0.0)",
+ org.equinoxosgi.toast.crust.widgets;version="1.0.0",
+ org.equinoxosgi.toast.dev.amplifier;version="[1.0.0,2.0.0)",
+ org.equinoxosgi.toast.dev.cdplayer;version="[1.0.0,2.0.0)",
+ org.equinoxosgi.toast.dev.radio;version="[1.0.0,2.0.0)",
+ org.eclipse.swt,
+ org.eclipse.swt.custom,
+ org.eclipse.swt.events,
+ org.eclipse.swt.graphics,
+ org.eclipse.swt.widgets
