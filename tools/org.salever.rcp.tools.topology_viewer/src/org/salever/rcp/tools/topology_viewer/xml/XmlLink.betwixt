@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<info primitiveTypes="attribute">
-	<element name="link">
-	    <attribute name="local_router" property="localRouter"/>
-	    <attribute name="remote_router" property="remoteRouter"/>
-		<addDefaults/>
-	</element>
-</info>

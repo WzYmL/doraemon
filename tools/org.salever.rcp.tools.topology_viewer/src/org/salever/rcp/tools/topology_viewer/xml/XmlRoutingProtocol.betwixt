@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<info primitiveTypes="attribute">
-	<element name="routing_protocol">
-		<attribute name="exterior_gateway_protocol" property="exProtocol"/>
-		<attribute name="interior_gateway_protocol" property="inProtocol"/>
-		<addDefaults/>
-	</element>
-</info>
