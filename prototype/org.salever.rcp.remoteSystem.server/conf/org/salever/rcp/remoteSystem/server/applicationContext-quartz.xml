@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<!-- 线程执行器配置，用于任务注册 -->
+	<bean id="executor"
+		class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<property name="corePoolSize" value="10" />
+		<property name="maxPoolSize" value="100" />
+		<property name="queueCapacity" value="500" />
+	</bean>
+	
+	<bean id="systemObject" class="org.salever.rcp.remoteSystem.server.quartz.SystemInitJob" />
+
+	<bean id="systemJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="systemObject" />
+		<property name="targetMethod" value="execute" />
+	</bean>
+
+	<!-- 仅仅执行一次 -->
+	<bean id="systemTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="startDelay">
+			<value>1000</value>
+		</property>
+		<property name="repeatCount">
+			<value>0</value>
+		</property>
+		<property name="repeatInterval" value="1000" />
+		<property name="jobDetail">
+			<ref local="systemJobDetail" />
+		</property>
+	</bean>
+
+	<!-- 设置调度 -->
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="systemTrigger" />
+			</list>
+		</property>
+		<property name="taskExecutor" ref="executor" />
+	</bean>
+
+
+</beans>

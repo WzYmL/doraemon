@@ -1,0 +1,152 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<!-- <bean id="propertyConfigurerCore" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"> 
+		<property name="ignoreUnresolvablePlaceholders" value="true"/> <property 
+		name="order" value="1" /> <property name="locations"> <list> <value>classpath*:db_mysql.properties</value> 
+		</list> </property> </bean> -->
+	<bean id="propertyPlaceholderConfigurer"
+		class=" org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
+	</bean>
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/test?zeroDateTimeBehavior=convertToNull" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+
+		<property name="mappingResources">
+			<list>
+				<value>com\readidtech\kgarten\server\db\mappings\Admin.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\AttendanceDevice.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\AttendanceTimeSetting.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\Card.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\Department.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\DeviceWarningMessage.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\DeviceWarningSetting.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\LocatorArea.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\LocatorDevice.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\LocatorRecord.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\Parent.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\ParentSmsTempalte.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\PickupRecord.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\SchoolClass.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\SmsSendLog.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\SmsTemplate.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\Student.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\StudentAttendance.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\StudentWarningMessage.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\Teacher.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\TeacherAttendance.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\TeacherClass.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\TeacherDepartment.hbm.xml
+				</value>
+				<value>com\readidtech\kgarten\server\db\mappings\WarningTimeSetting.hbm.xml
+				</value>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="transactionInterceptor"
+		class="org.springframework.transaction.interceptor.TransactionInterceptor">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="insert">PROPAGATION_REQUIRED, -Exception</prop>
+				<prop key="add">PROPAGATION_REQUIRED, -Exception</prop>
+				<prop key="save">PROPAGATION_REQUIRED, -Exception</prop>
+				<prop key="update">PROPAGATION_REQUIRED, -Exception</prop>
+				<prop key="remove">PROPAGATION_REQUIRED, -Exception</prop>
+				<prop key="delete">PROPAGATION_REQUIRED, -Exception</prop>
+
+				<prop key="insert*">PROPAGATION_REQUIRED, -Exception</prop>
+				<prop key="add*">PROPAGATION_REQUIRED, -Exception</prop>
+				<prop key="save*">PROPAGATION_REQUIRED, -Exception</prop>
+				<prop key="*Save">PROPAGATION_REQUIRED, -Exception</prop>
+				<prop key="update*">PROPAGATION_REQUIRED, -Exception</prop>
+				<prop key="remove*">PROPAGATION_REQUIRED, -Exception</prop>
+				<prop key="del*">PROPAGATION_REQUIRED, -Exception</prop>
+
+				<prop key="*">readOnly</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="baseTransactionProxy"
+		class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<property name="beanNames">
+			<value>*ServiceImpl</value>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>transactionInterceptor</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="baseHibernateDao" abstract="true">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+		<property name="jdbcTemplate">
+			<ref local="jdbcTemplate" />
+		</property>
+	</bean>
+
+	<bean id="baseJdbcDao" abstract="true">
+		<property name="jdbcTemplate">
+			<ref local="jdbcTemplate" />
+		</property>
+	</bean>
+</beans>

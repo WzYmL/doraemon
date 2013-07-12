@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- 登录 -->
+	<bean name="loginService"
+		class="org.salever.rcp.remoteSystem.server.security.LoginServiceImpl" />
+
+	<!-- 所有模型对应的Service -->
+	<bean id="adminService"
+		class="org.salever.rcp.remoteSystem.server.service.impl.AdminServiceImpl" />
+	<bean id="cardService"
+		class="org.salever.rcp.remoteSystem.server.service.impl.CardServiceImpl" />
+</beans>

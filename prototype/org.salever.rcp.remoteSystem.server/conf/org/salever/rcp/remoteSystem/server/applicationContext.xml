@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+	<context:annotation-config />
+
+	<import
+		resource="classpath:/org/salever/rcp/remoteSystem/server/application-db-source.xml" />
+	<import
+		resource="classpath:/org/salever/rcp/remoteSystem/server/applicationContext-service.xml" />
+	<import
+		resource="classpath:/org/salever/rcp/remoteSystem/server/applicationContext-dao.xml" />
+	<import
+		resource="classpath:/org/salever/rcp/remoteSystem/server/applicationContext-quartz.xml" />
+
+
+
+	<!-- <bean id="logger" class="com.readidtech.resthome.server.log.Logger">
+		<property name="logService" ref="logService" />
+		<property name="userService" ref="userService" />
+	</bean> -->
+<!-- 	<aop:config>
+
+		<aop:aspect ref="logger"> <aop:pointcut id="log" expression="execution(com.readidtech.resthome.server.service.impl.main.*.*(..))"/> 
+			<aop:before pointcut-ref="log" method="before"/> <aop:after pointcut-ref="log" 
+			method="after"/> <aop:after-throwing method="error"/> </aop:aspect>
+
+		<aop:aspect ref="logger">
+			<aop:after method="log"
+				pointcut="execution (* com.readidtech.resthome.server.service.impl.main.*.*(..)) 
+    			and !execution (* com.readidtech.resthome.server.service.impl.main.SimpleUserService.getLoginUser(..))
+    			and !execution (* com.readidtech.resthome.server.service.impl.main.SimpleLogService.log(..))
+    			and !execution (* com.readidtech.resthome.server.service.impl.main.*.find*(..))
+    			and !execution (* com.readidtech.resthome.server.service.impl.main.*.count*(..))
+    			and !execution (* com.readidtech.resthome.server.service.impl.main.*.get*(..))
+    			" />
+			<aop:around method="runOnAround" pointcut="execution (* com.zywang.services.impl.*.*(..))"/>
+		</aop:aspect>
+	</aop:config> -->
+	<!-- <bean id="simpleDataService"
+		class="com.readidtech.resthome.server.service.impl.main.SimpleDataService">
+		<property name="dataDao" ref="dataDao"></property>
+	</bean>
+	<bean id="autoBackupTask"
+		class="com.readidtech.resthome.server.task.AutoBackupDataBaseTask">
+		<property name="service" ref="simpleDataService" />
+	</bean>
+	<bean id="autoBackupListenner"
+		class="com.readidtech.resthome.server.task.DataBaseBackupListener">
+		<property name="task" ref="autoBackupTask" />
+	</bean>
+ -->
+</beans>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<!-- 远程Service -->
+	<bean id="exportedService"
+		class="org.springframework.remoting.caucho.HessianServiceExporter"
+		abstract="true">
+		<property name="sendCollectionType" value="true" />
+	</bean>
+
+	<!-- 登录处理 -->
+	<bean name="/loginService" parent="exportedService">
+		<property name="service" ref="loginService" />
+		<property name="serviceInterface"
+			value="org.salever.rcp.remoteSystem.server.service.LoginService" />
+	</bean>
+
+	<!-- 所有模型对应的Service -->
+	<bean name="/adminService" parent="exportedService">
+		<property name="service" ref="adminService" />
+		<property name="serviceInterface"
+			value="org.salever.rcp.remoteSystem.server.service.AdminService" />
+	</bean>
+	
+	<bean name="/cardService" parent="exportedService">
+		<property name="service" ref="cardService" />
+		<property name="serviceInterface"
+			value="org.salever.rcp.remoteSystem.server.service.CardService" />
+	</bean>
+	
+</beans>

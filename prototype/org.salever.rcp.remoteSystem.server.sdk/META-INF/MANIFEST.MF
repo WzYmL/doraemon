@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Sdk
+Bundle-SymbolicName: org.salever.rcp.remoteSystem.server.sdk
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.salever.rcp.remoteSystem.server.sdk.ServerSDKActivator
+Bundle-Vendor: READID
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: org.salever.rcp.remoteSystem.server.model,
+ org.salever.rcp.remoteSystem.server.model.ceriterion,
+ org.salever.rcp.remoteSystem.server.sdk,
+ org.salever.rcp.remoteSystem.server.service

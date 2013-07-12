@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2011-10-5 12:18:45 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.salever.rcp.dbSystem.client.db.model.Card" table="card" catalog="test">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="code" type="string">
+            <column name="CODE" length="45" not-null="true" />
+        </property>
+        <property name="deviceType" type="int">
+            <column name="DEVICE_TYPE" not-null="true">
+                <comment>&#201;&#232;&#177;&#184;&#192;&#224;&#208;&#205;&#163;&#168;900M&#163;&#172;2.4G&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="codeWidth" type="int">
+            <column name="CODE_WIDTH" not-null="true">
+                <comment>
+                &#177;&#224;&#186;&#197;&#191;&#237;&#182;&#200;&#163;&#172;&#182;&#193;&#191;&#168;&#198;&#247;&#198;&#218;&#205;&#251;&#181;&#196;&#191;&#237;&#182;&#200;&#163;&#172;&#208;&#232;&#210;&#170;&#178;&#185;&#193;&#227;</comment>
+            </column>
+        </property>
+        <property name="status" type="int">
+            <column name="STATUS" not-null="true">
+                <comment>&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

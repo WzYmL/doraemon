@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 1, 2012 9:06:40 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.salever.rcp.remoteSystem.server.model.Admin" table="admin" catalog="test">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="username" type="string">
+            <column name="USERNAME" length="45" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="PASSWORD" length="45" not-null="true" />
+        </property>
+        <property name="realname" type="string">
+            <column name="REALNAME" length="45" not-null="true" />
+        </property>
+        <property name="mobile" type="string">
+            <column name="MOBILE" length="45" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="45" not-null="false" />
+        </property>
+        <property name="type" type="byte">
+            <column name="TYPE" not-null="true">
+                <comment>&#185;&#220;&#192;&#237;&#212;&#177;&#187;&#185;&#202;&#199;&#178;&#217;&#215;&#247;&#212;&#177;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

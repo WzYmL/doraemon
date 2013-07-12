@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.salever.rcp.remoteSystem.client.net.core.category"
+            class="org.salever.rcp.remoteSystem.client.net.core.preferences.ServerPreferencePage"
+            id="org.salever.rcp.remoteSystem.client.net.core.preferences.ServerPreferencePage"
+            name="%page.name">
+      </page>
+      <page
+            class="org.salever.rcp.remoteSystem.client.net.core.preferences.ServerCategoryPage"
+            id="org.salever.rcp.remoteSystem.client.net.core.category"
+            name="%page.name.0">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.salever.rcp.remoteSystem.client.net.core.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+
+</plugin>
